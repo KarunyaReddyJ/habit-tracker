@@ -17,6 +17,7 @@ const AddHabit = () => {
         name: habit,
         progress: 0,
         streak: 0,
+        completedDays:[false]
       },
     ]);
     setHabit("");
