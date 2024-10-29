@@ -1,0 +1,35 @@
+.sidebar {
+    position: fixed; /* Keep the sidebar fixed on the left */
+    left: -250px; /* Hidden by default */
+    width: 250px; /* Sidebar width */
+    height: 100%; /* Full height */
+    background-color: #333; /* Background color */
+    transition: left 0.3s ease; /* Sliding transition */
+    z-index: 1000; /* Ensure it is above other content */
+  }
+  
+  .sidebar.open {
+    left: 0; /* Move into view */
+  }
+  
+  .sidebar.closed {
+    left: -250px; /* Move out of view */
+  }
+  
+  /* Styles for the close button */
+  .close-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .sidebar {
+      left: 0; /* Always visible on wider screens */
+      transition: none; /* No sliding effect on wider screens */
+    }
+  }
+  

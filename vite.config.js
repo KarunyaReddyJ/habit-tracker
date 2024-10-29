@@ -7,9 +7,9 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',  // Auto-update the service worker
+      registerType: 'autoUpdate',  
       devOptions: {
-        enabled: true, // Enable in development for testing
+        enabled: true, 
       },
       manifest: {
         name: 'Vite React PWA',
@@ -17,7 +17,7 @@ export default defineConfig({
         description: 'A Vite + React Progressive Web App',
         theme_color: '#ffffff',
         background_color: '#ffffff',
-        display: 'standalone',  // Ensures it behaves like a native app
+        display: 'standalone',  
         icons: [
           {
             src: 'icon.png',
