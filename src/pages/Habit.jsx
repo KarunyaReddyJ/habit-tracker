@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useTasks from '../hooks/useTasks';
 import ProgressChart from '../components/ProgressChart';
 import StreakCounter from '../components/StreakCounter';
+import Heatmap from '../components/HeatMap';
 
 const Habit = () => {
   const { id } = useParams();  
@@ -24,6 +25,7 @@ const Habit = () => {
     <div>
       <ProgressChart habit={habit} />
       <StreakCounter streak={habit?.streak || 0} />
+      <Heatmap completedDays={habit.completedDays} />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+    gap: 5px;
+  }
+  
+  .heatmap-cell {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray; /* Default color */
+    transition: background-color 0.3s;
+  }
+  
+  .heatmap-cell.completed {
+    background-color: green; /* Color for completed days */
+  }
+  
