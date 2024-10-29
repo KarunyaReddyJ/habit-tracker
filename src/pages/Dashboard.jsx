@@ -1,10 +1,8 @@
-import ProgressChart from './ProgressChart';
-import StreakCounter from './StreakCounter';
+import ProgressChart from '../components/ProgressChart';
+import StreakCounter from '../components/StreakCounter';
 import useTasks from '../hooks/useTasks';
 const Dashboard = () => {
     const {tasks }=useTasks()
-    console.log(tasks)
-    //if(!habits) return <>Loading</>
   return (
     <div>
       <h1>Habit Tracker Dashboard</h1>

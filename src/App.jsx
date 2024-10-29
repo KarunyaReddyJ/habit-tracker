@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import { TaskContextProvider } from './store/TaskContext';
 import { Toaster } from 'react-hot-toast';
-import Dashboard from './components/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Habit from './pages/Habit';
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,8 +27,8 @@ function App() {
         </button> }
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<div>Login</div>} />
-          <Route path="/signup" element={<div>Signup</div>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path="/habit/:id" element={<Habit />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<div>Not Found</div>} />

@@ -40,3 +40,60 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.sidebar {
+  position: fixed; /* Keep the sidebar fixed on the left */
+  left: -250px; /* Hidden by default */
+  width: 250px; /* Sidebar width */
+  height: 100%; /* Full height */
+  background-color: #333; /* Background color */
+  transition: left 0.3s ease; /* Sliding transition */
+  z-index: 1000; /* Ensure it is above other content */
+  text-align: left;
+}
+.sidebar ul{
+  list-style-type: none;
+}
+.sidebar li * {
+  margin: 5px 0;
+  color: white;
+}
+.sidebar.open {
+  left: 0; /* Move into view */
+  
+}
+
+.sidebar.closed {
+  left: -250px; /* Move out of view */
+}
+
+/* Styles for the close button */
+
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0; /* Always visible on wider screens */
+    transition: none; /* No sliding effect on wider screens */
+  }
+}
+
+
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+  gap: 5px;
+}
+
+.heatmap-cell {
+  width: 30px;
+  height: 30px;
+  background-color: lightgray; /* Default color */
+  transition: background-color 0.3s;
+}
+
+.heatmap-cell.completed {
+  background-color: green; /* Color for completed days */
+}

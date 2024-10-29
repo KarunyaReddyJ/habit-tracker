@@ -25,12 +25,24 @@ const AddHabit = () => {
     <form
       onSubmit={handleFormSubmission}
     >
-      <input
-        placeholder="Add Habit"
-        type="text"
-        value={habit}
-        onChange={(e) => setHabit(e.target.value)}
-      />
+     <input
+  placeholder="Add Habit"
+  type="text"
+  value={habit}
+  onChange={(e) => setHabit(e.target.value)}
+  style={{
+    width: "60%",
+    padding: "10px",
+    marginBottom: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    fontSize: "16px",
+    outline: "none",
+    boxSizing: "border-box",
+    maxWidth:'400px'
+  }}
+/>
+
       <button type="submit">Add</button>
     </form>
   );
