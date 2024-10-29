@@ -20,9 +20,9 @@ function App() {
       <Toaster />
       <Router>
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        <button className="hamburger" onClick={toggleSidebar}>
-          &#9776; {/* Hamburger icon */}
-        </button>
+       { !isSidebarOpen && <button style={{position:'absolute',left:0}} className="hamburger" onClick={toggleSidebar}>
+          &#9776; 
+        </button> }
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<div>Login</div>} />

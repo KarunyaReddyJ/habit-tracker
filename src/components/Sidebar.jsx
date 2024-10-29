@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <button onClick={toggleSidebar} className="close-btn">✖</button>
+      <button style={{position:'absolute',left:0}} onClick={toggleSidebar} className="close-btn">✖</button>
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
