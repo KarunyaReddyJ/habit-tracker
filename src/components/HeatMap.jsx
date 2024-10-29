@@ -1,5 +1,5 @@
-import React from 'react';
-import './Heatmap.css'; // Add your styling here
+
+import './HeatMap.css'; // Add your styling here
 
 const Heatmap = ({ completedDays }) => {
     return (
