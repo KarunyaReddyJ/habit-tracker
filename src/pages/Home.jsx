@@ -1,6 +1,5 @@
 import AddHabit from "../components/AddHabit";
 import HabitPalette from "../components/HabitPalette";
-import Sidebar from "../components/SIdebar";
 import useTasks from "../hooks/useTasks";
 const Home = () => {
     const {tasks :habits}=useTasks()
